@@ -113,16 +113,3 @@ test('iFrame Automation', async ({page})=>
         console.log(message.split(" ")[1]);
 
     });
-
-
-
-test('iFrame Automation2', async ({page})=>
-{
-
-    await page.goto('https://www.carwale.com/');
-    await page.getByRole('img', { name: 'Maruti Suzuki Fronx' }).first().click();
-    await page.locator('div:nth-child(2) > .o-bdccbU > div > div > div:nth-child(2) > .o-bXKmQE').click();
-    await page.getByRole('button', { name: 'Close Popup' }).click();
-
-
-});

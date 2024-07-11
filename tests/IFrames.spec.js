@@ -16,7 +16,7 @@ test('iFrame Automation', async ({page})=>
 
     const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
 
-test('iFrame Automation2', async ({page})=>
+test('Tarea Carlos', async ({page})=>
 {
 
     await page.goto('https://www.carwale.com/');
@@ -38,14 +38,12 @@ test('iFrame Automation2', async ({page})=>
     await delay(1000);
     await boton.click();
 
-    //////////////////////
 
     const spanCurrentTime = iFramePage.locator('span[class="ytp-time-current"]');
     let currentTime =  await spanCurrentTime.textContent();
     let secs = Number(currentTime.split(":")[1]);
-    console.log('segs+ '+secs);
-
-    while(secs<=10){
+ 
+    while(secs<10){
         console.log('segundos: '+ secs);
         let time= await spanCurrentTime.textContent()
         secs = Number(time.split(":")[1]);
@@ -61,7 +59,6 @@ test('iFrame Automation2', async ({page})=>
 
     await carWaleLogo.waitFor();
     carWaleLogo.click();
-
 
 
     await expect(page).toHaveURL('https://www.carwale.com/');

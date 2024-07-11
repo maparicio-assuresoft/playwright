@@ -29,8 +29,8 @@ module.exports = defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     //trace: 'on-first-retry',
-    //trace: 'on',   Registra trace para todos los test
-    trace: 'retain-on-failure',  //Solo genera traces para los failed
+    trace: 'on',   //Registra trace para todos los test
+    //trace: 'retain-on-failure',  //Solo genera traces para los failed
     headless: false,
     screenshot: 'on',
     
